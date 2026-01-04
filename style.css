@@ -1,0 +1,415 @@
+/* =========================================
+   1. GLOBAL STYLES & FONT (FINAL UPDATE with Silver Highlights)
+   ========================================= */
+
+:root {
+    /* Deeper, more intense colors matching the image */
+    --color-dark-bg: #000410;
+    --color-neon-blue: #00FFFF;
+    --color-light-blue: #00BFFF;
+    --color-text-primary: #e0f0ff;
+    
+    /* NEW SILVER/WHITE COLOR DEFINITION */
+    --color-silver-glow: #F0F0F0; 
+
+    /* Custom Font Definitions with Fallbacks (No change) */
+    --font-heading: "Cornerstone", "Impact", sans-serif;         
+    --font-name: "Futura MD BT", "Futura", Arial, sans-serif;    
+    --font-label: "Century Gothic", "Franklin Gothic Medium", sans-serif; 
+    --font-info: "Futura LT BT", "Futura", Arial, sans-serif;    
+
+    /* Enhanced glow effect with multiple layers (No change) */
+    --glow-shadow-subtle: 0 0 5px var(--color-light-blue);
+    --glow-shadow-strong: 0 0 15px var(--color-neon-blue), 0 0 25px var(--color-light-blue);
+    --border-radius-lg: 30px; 
+}
+
+body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-info);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Subtle background grid pattern (no change) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, rgba(0, 191, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 191, 255, 0.05) 1px, transparent 1px);
+    background-size: 25px 25px;
+    z-index: -1;
+}
+
+/* Main Heading Style (Cornerstone) (No change) */
+h2, h3 {
+    text-align: center;
+    color: var(--color-neon-blue);
+    text-shadow: var(--glow-shadow-subtle);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+strong {
+    color: var(--color-neon-blue);
+    text-shadow: 0 0 3px rgba(0, 255, 255, 0.5); 
+    font-family: var(--font-label);
+    font-weight: normal;
+}
+
+/* =========================================
+   2. MAIN CONTAINER & HOLO-FRAME STYLES (No change)
+   ========================================= */
+
+#dossier-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 35px;
+    background: radial-gradient(circle at center, #010816 0%, #000410 100%);
+    border-radius: 40px; 
+    position: relative;
+    border: 3px solid rgba(0, 191, 255, 0.5); 
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4); 
+}
+
+/* Header style for the centered "PROFILE" box (Cornerstone) (No change) */
+#dossier-container h2:first-of-type {
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0 auto 30px;
+    border: 2px solid var(--color-neon-blue);
+    border-radius: 10px;
+    box-shadow: var(--glow-shadow-strong);
+    background: rgba(0, 191, 255, 0.1);
+    font-family: var(--font-heading);
+}
+
+/* Section divider lines (holographic/circuit style) (No change) */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-neon-blue), transparent);
+    box-shadow: 0 0 8px var(--color-neon-blue);
+    margin: 30px 0;
+}
+
+/* =========================================
+   3. INNER SECTION FRAMES (Futura LT BT Info Text)
+   ========================================= */
+
+#identity-section, #profile-details, #mission-objective {
+    padding: 20px;
+    border: 1px solid rgba(0, 191, 255, 0.4);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 20px;
+    background-color: rgba(30, 144, 255, 0.03); 
+    box-shadow: var(--glow-shadow-subtle) inset;
+    font-family: var(--font-info);
+}
+
+#identity-section p, #profile-details p, #mission-objective p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Highlight the main name/designation (Futura MD BT) - CHANGED TO SILVER */
+#character-name {
+    font-family: var(--font-name);
+    font-size: 2.2em;
+    color: var(--color-silver-glow); /* Changed from #FF00FF to Silver */
+    text-shadow: 0 0 8px var(--color-silver-glow); /* Changed from #FF00FF to Silver */
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* Styling for the character-flower span */
+#character-flower {
+    color: #50C878; /* Emerald Green */
+    text-shadow: 0 0 8px rgba(80, 200, 120, 0.6);
+    font-style: italic;
+    font-family: var(--font-info);
+}
+
+/* =========================================
+   4. CATEGORY SELECTION FRAME (No change)
+   ========================================= */
+
+#category-selection-section {
+    padding: 25px 20px;
+    margin-top: 35px;
+    border: 3px solid var(--color-neon-blue);
+    border-radius: 40px; 
+    box-shadow: 0 0 15px var(--color-neon-blue) inset, 0 0 25px var(--color-light-blue);
+    background-color: rgba(0, 10, 30, 0.5);
+    font-family: var(--font-info);
+}
+
+#category-selection-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: var(--color-text-primary);
+    text-shadow: none;
+    text-align: left;
+    font-family: var(--font-heading);
+}
+
+#category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+/* =========================================
+   5. BUTTON STYLING (Futura MD BT) - CHANGED TO SILVER
+   ========================================= */
+
+button {
+    background: linear-gradient(145deg, rgba(0, 191, 255, 0.2) 0%, rgba(0, 60, 120, 0.2) 100%);
+    border: 1px solid var(--color-neon-blue);
+    color: var(--color-text-primary);
+    font-family: var(--font-name);
+    font-size: 0.95em;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    min-width: 180px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, rgba(0, 191, 255, 0.4) 0%, rgba(0, 60, 120, 0.4) 100%);
+    box-shadow: var(--glow-shadow-strong);
+    transform: scale(1.02);
+}
+
+/* Status Badge Styling */
+#character-status {
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    border: 1px solid transparent;
+}
+
+/* Status Variations */
+.status-stable {
+    color: #00FF41; /* Matrix Green */
+    border-color: #00FF41 !important;
+    text-shadow: 0 0 8px #00FF41;
+}
+
+.status-warning {
+    color: #FFD700; /* Gold/Yellow */
+    border-color: #FFD700 !important;
+    text-shadow: 0 0 8px #FFD700;
+}
+
+.status-danger {
+    color: #FF3131; /* Neon Red */
+    border-color: #FF3131 !important;
+    text-shadow: 0 0 8px #FF3131;
+}
+
+.status-unknown {
+    color: #C0C0C0; /* Silver */
+    border-color: #C0C0C0 !important;
+    text-shadow: 0 0 8px #C0C0C0;
+}
+
+/* The Scanner Bar Styling */
+#scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to bottom, transparent, var(--color-neon-blue), transparent);
+    box-shadow: 0 0 15px var(--color-neon-blue), 0 0 30px var(--color-light-blue);
+    opacity: 0; /* Hidden by default */
+    z-index: 20;
+    pointer-events: none; /* So it doesn't block clicks */
+}
+
+/* The Animation Trigger Class */
+.scanning {
+    animation: scan-move 1.2s ease-in-out;
+}
+
+@keyframes scan-move {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+#generate-button {
+    min-width: 250px;
+    font-size: 1.2em;
+    /* Changed pink/blue gradient to Silver/Blue */
+    background: linear-gradient(45deg, var(--color-silver-glow) 0%, #00BFFF 100%); 
+    border: 2px solid var(--color-silver-glow);
+    /* Changed glow shadow to Silver/Blue */
+    box-shadow: 0 0 20px var(--color-silver-glow), 0 0 35px #00BFFF;
+    color: var(--color-dark-bg);
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-family: var(--font-name);
+}
+
+#generate-button:hover {
+    /* Changed hover shadow to Silver/Blue */
+    box-shadow: 0 0 30px var(--color-silver-glow), 0 0 50px #00BFFF;
+}
+
+/* Animated Scanline */
+#dossier-container::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 255, 255, 0.05) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none; /* Allows you to click buttons through the effect */
+}
+
+/* Subtle Screen Flicker */
+@keyframes flicker {
+    0% { opacity: 0.98; }
+    5% { opacity: 0.95; }
+    10% { opacity: 0.99; }
+    100% { opacity: 1; }
+}
+
+#dossier-container {
+    animation: flicker 0.15s infinite;
+}
+
+/* Glitch Overlay */
+#glitch-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 9999; /* Ensure it's on top */
+    pointer-events: none; /* Allow interaction with elements beneath */
+    opacity: 0; /* Start invisible */
+    animation: glitch-flash 0.8s ease-out forwards; /* Glitch animation */
+}
+
+@keyframes glitch-flash {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    10% {
+        opacity: 0.5;
+        transform: scale(1.02) skewX(5deg);
+    }
+    20% {
+        opacity: 0.3;
+        transform: scale(0.98) skewX(-5deg);
+    }
+    30% {
+        opacity: 0.7;
+        transform: scale(1.03) skewX(8deg);
+    }
+    40% {
+        opacity: 0.2;
+        transform: scale(0.97) skewX(-8deg);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.01) skewX(3deg);
+    }
+    60% {
+        opacity: 0.1;
+        transform: scale(0.99) skewX(-3deg);
+    }
+    70% {
+        opacity: 0.4;
+        transform: scale(1.02) skewX(6deg);
+    }
+    80% {
+        opacity: 0.05;
+        transform: scale(0.98) skewX(-6deg);
+    }
+    90% {
+        opacity: 0.2;
+        transform: scale(1.01) skewX(2deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+        display: none; /* Hide after animation */
+    }
+}
+/* Skill Matrix Layout */
+#skill-matrix {
+    padding: 20px;
+    border: 1px solid rgba(0, 191, 255, 0.4);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 20px;
+    background-color: rgba(30, 144, 255, 0.03);
+}
+
+.skill-container {
+    margin-bottom: 15px;
+}
+
+/* The "Tube" or Background of the bar */
+.bar-bg {
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-light-blue);
+    border-radius: 6px;
+    margin-top: 5px;
+    overflow: hidden; /* Clips the fill to the rounded corners */
+    position: relative;
+}
+
+/* The Glowing Fill */
+.bar-fill {
+    height: 100%;
+    width: 0%; /* Starts at 0 */
+    background: linear-gradient(90deg, var(--color-light-blue), var(--color-neon-blue));
+    box-shadow: 0 0 10px var(--color-neon-blue);
+    transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); /* Smooth "charging" effect */
+}

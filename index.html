@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Character Generator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <main id="dossier-container">
+        <div id="scan-line"></div>
+        
+        <section id="category-selection-section">
+            <h2>˙𐃷˙ Select Character Theme:</h2>
+            <div id="category-buttons">
+                <button id="btn-scifi" data-category="SCI_FI_ADVENTURE">SCI-FI ADVENTURE</button>
+                <button id="btn-personal" data-category="PERSONAL_LIFE">PERSONAL LIFE</button>
+                <button id="btn-academic" data-category="ART_ACADEMIC">ART AND ACADEMIC</button>
+            </div>
+            
+            <button id="generate-button">INITIATE RANDOM FILE</button>
+        </section>
+
+        <hr> <h2>PROFILE</h2>
+
+        <section id="identity-section">
+            <p><strong>ASSIGNED CATEGORY:</strong> <span id="character-category-display">---</span></p>
+            <p><strong>DESIGNATION:</strong> <span id="character-name">---</span></p>
+            <p><strong>CURRENT STATUS:</strong> <span id="character-status">---</span></p>
+            <p><strong>SPECIES TYPE:</strong> <span id="character-species">---</span></p>
+            <p><strong>AGE:</strong> <span id="character-age">---</span></p>
+            <p><strong>GENDER:</strong> <span id="character-gender">---</span></p>
+            <p><strong>ETHNICITY:</strong> <span id="character-ethnicity">---</span></p>
+            <p><strong>FLORAL MOTIF:</strong> <span id="character-flower">---</span></p>
+        
+            <p><strong>SECTOR ROLE:</strong> <span id="character-profession">---</span></p>
+            <p><strong>ORIGIN:</strong> <span id="character-origin">---</span></p>
+            <p><strong>SIGNATURE ITEM:</strong> <span id="character-item">---</span></p>
+        </section>
+
+        <section id="profile-details">
+            <h3>PSYCHOLOGICAL PROFILE</h3>
+            <p><strong>TRAIT 1:</strong> <span id="trait-one">---</span></p>
+            <p><strong>TRAIT 2:</strong> <span id="trait-two">---</span></p>
+        </section>
+
+<section id="skill-matrix">
+    <h3>CAPABILITY MATRIX</h3>
+    
+    <div class="skill-container">
+        <strong>INTELLECT:</strong>
+        <div class="bar-bg"><div id="bar-intellect" class="bar-fill"></div></div>
+    </div>
+
+    <div class="skill-container">
+        <strong>COMBAT:</strong>
+        <div class="bar-bg"><div id="bar-combat" class="bar-fill"></div></div>
+    </div>
+
+    <div class="skill-container">
+        <strong>EMPATHY:</strong>
+        <div class="bar-bg"><div id="bar-empathy" class="bar-fill"></div></div>
+    </div>
+</section>
+
+        <section id="mission-objective">
+            <h3>LIFE GOAL</h3>
+            <p><span id="character-goal">---</span></p>
+        </section>
+        
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+<audio id="sound-click" src="https://actions.google.com/sounds/v1/foley/button_click.ogg" preload="auto"></audio>
+<audio id="sound-process" src="https://actions.google.com/sounds/v1/foley/electronic_chime.ogg" preload="auto"></audio>
+
+
+<div id="glitch-overlay"></div>
+
+</body>
+</html>
+</html>
